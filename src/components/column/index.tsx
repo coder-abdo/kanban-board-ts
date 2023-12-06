@@ -8,7 +8,7 @@ type Props = {
   state: Status
 }
 export const Column: FC<Props> = ({ state }) => {
-  const { filteredTasks, handleDragStart, handleDragLeave, handleDragOver, handleDrop, isDropped, handleDeleteTask } = useTasks(state)
+  const { filteredTasks, handleDragStart, handleDragLeave, handleDragOver, handleDrop, handleDeleteTask } = useTasks(state)
   return (
     <div
       className="min-w-[250px] p-2 rounded min-h-[200px] bg-slate-50 border border-gray-500 dark:bg-gray-200 dark:border-gray-200"
