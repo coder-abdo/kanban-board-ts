@@ -2,7 +2,6 @@ import type { FC } from 'react'
 import { clsx } from 'clsx'
 import { Task } from "@/components/task"
 import { Status } from "@/types"
-import { useStore } from "@/store"
 import { useTasks } from "@/hooks/useTasks"
 
 type Props = {
@@ -27,8 +26,6 @@ export const Column: FC<Props> = ({ state }) => {
           filteredTasks.length > 0 ? filteredTasks.map(task => <Task
             key={task.id}
             taskTitle={task.title}
-            onDraggingOver={handleDragOver}
-            onDropping={handleDrop}
             onDraggingStar={() => handleDragStart(task.title)}
             deleteTask={() => handleDeleteTask(task.id)}
 
